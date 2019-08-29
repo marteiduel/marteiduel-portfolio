@@ -12,7 +12,7 @@ export default class PortfolioForm extends Component {
     this.state = {
       name: "",
       description: "",
-      category: "eCommerce",
+      category: "HTML-CSS",
       position: "",
       url: "",
       thumb_image: "",
@@ -40,8 +40,9 @@ export default class PortfolioForm extends Component {
   deleteImage(imageType) {
     axios
       .delete(
-        `https://api.devcamp.space/portfolio/delete-portfolio-image/${this.state
-          .id}?image_type=${imageType}`,
+        `https://api.devcamp.space/portfolio/delete-portfolio-image/${
+          this.state.id
+        }?image_type=${imageType}`,
         { withCredentials: true }
       )
       .then(response => {
@@ -74,7 +75,7 @@ export default class PortfolioForm extends Component {
         id: id,
         name: name || "",
         description: description || "",
-        category: category || "eCommerce",
+        category: category || "HTML-CSS",
         position: position || "",
         url: url || "",
         editMode: true,
@@ -167,7 +168,7 @@ export default class PortfolioForm extends Component {
         this.setState({
           name: "",
           description: "",
-          category: "eCommerce",
+          category: "HTML-CSS",
           position: "",
           url: "",
           thumb_image: "",
@@ -225,9 +226,9 @@ export default class PortfolioForm extends Component {
             onChange={this.handleChange}
             className="select-element"
           >
-            <option value="eCommerce">eCommerce</option>
-            <option value="Scheduling">Scheduling</option>
-            <option value="Enterprise">Enterprise</option>
+            <option value="HTML-CSS">HTML-CSS</option>
+            <option value="Javascript-React">Javascript-React</option>
+            <option value="Python-Flask">Python-Flask</option>
           </select>
         </div>
 
